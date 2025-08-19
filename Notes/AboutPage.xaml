@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.AboutPage"
+             Title="AboutPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="github.png"
+                HeightRequest="250"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Logo do Site GitHub onde tem uma esfera em cor preta com a silhueta de uma gato em branco no meio da esfera
+                e em baixo o nome do GitHub em preto" />
+        
+            <Label 
+                Text="Notes APP V1.0"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="EnviarBtn"
+                Text="Ir Para o meu Git hub" 
+                SemanticProperties.Hint=" Ao clicar o usuário será redirecionado para o site do GitHub"
+                Clicked="EnviarBtn_Clicked"
+                HorizontalOptions="Fill" />
+
+            <Label 
+                Text="Desenvolvido por: Lucas Soler Chanhi"
+                VerticalOptions="Center" 
+                SemanticProperties.Description ="Desenvolvido por Lucas Soler Chanhi" 
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
