@@ -1,25 +1,25 @@
-﻿namespace Notes
+﻿using Microsoft.Maui.Controls;
+
+namespace Notes
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        string caminho = Path.Combine(FileSystem.AppDataDirectory,"arquivo");
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void editor_Completed(object sender, EventArgs e)
         {
-            count++;
+            string conteudo = CaixaEditor.Text;
+            File.WriteAllText(caminho, conteudo);
+        }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+        private void ApagarBtn_Clicked(object sender, EventArgs e)
+        {
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
         }
     }
-
 }
