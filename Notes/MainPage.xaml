@@ -30,6 +30,13 @@
                     Clicked="ApagarBtn_Clicked"
            />
 
+                <Button
+                    x:Name="ApagaTxtBtn"
+                    Text="Apagar Texto" 
+                    SemanticProperties.Hint=" Botão para apagar todo o testo digitado"
+                    Clicked="ApagarTxtBtn_Clicked"
+           />
+
             </HorizontalStackLayout>
 
         </VerticalStackLayout>
